@@ -32,9 +32,17 @@
 		float: right;
 		size: 20px;
 	}
-	#nota{
-		margin-bottom: 3%;
-	}
+	#nota{margin-bottom: 3%;}
+
+	.rojo {background-color:#FF0000;}
+
+	.azul {background-color:#0066FF;}
+
+	.verde {background-color:#009900;}
+
+	.amarillo{background-color: yellow;}
+
+	option:hover {background-color: transparent;}
 </style>
 </head>
 <body>
@@ -93,6 +101,12 @@
 													</div>
 													<div class="modal-body">
 														<textarea placeholder="Nota" class="col-12"></textarea>
+														<select name="Color" class="colores">
+															<option class="rojo">Rojo</option>
+															<option class="azul">azul</option>
+															<option class="verde">Verde</option>
+															<option class="amarillo">Amarillo</option>
+														</select>
 													</div>
 													</form>
 													<div class="modal-footer">
