@@ -24,6 +24,18 @@
 
 	<!-- Custom styles for this template -->
 	<link href="css/style.css" rel="stylesheet">
+
+	<style type="text/css">
+	#eliminar{
+		margin: 0 auto;
+		display: block;
+		float: right;
+		size: 20px;
+	}
+	#nota{
+		margin-bottom: 3%;
+	}
+</style>
 </head>
 <body>
 	<div class="container-fluid" id="wrapper">
@@ -34,9 +46,7 @@
 				<a href="#menu-toggle" class="btn btn-default" id="menu-toggle"><em class="fa fa-bars"></em></a>
 				
 				<ul class="nav nav-pills flex-column sidebar-nav">
-					<li class="nav-item"><a class="nav-link active" href="index.html"><em class="fa fa-dashboard"></em> Menú de Inicio <span class="sr-only">(current)</span></a></li>
-					<li class="nav-item"><a class="nav-link" href="#"><em class="fa fa-calendar-o"></em>Mis Pedidos</a></li>
-					<li class="nav-item"><a class="nav-link" href="#"><em class="fa fa-clone"></em>Realizar Nuevo pedido</a></li>
+					<li class="nav-item"><a class="nav-link active" href="index.html"><em class="fa fa-dashboard"></em> Notas <span class="sr-only">(current)</span></a></li>
 				</ul>
 				
 				<a href="#" class="logout-button"><em class="fa fa-power-off"></em>Cerrar Sesión</a></nav>
@@ -51,7 +61,7 @@
 							<img src="images/profile-pic.jpg" alt="profile photo" class="circle float-left profile-photo" width="50" height="auto">
 
 							<div class="username mt-1">
-								<h4 class="mb-1">Mecánico</h4>
+								<h4 class="mb-1">Usuario Keep</h4>
 
 								<h6 class="text-muted">Nombre</h6>
 							</div>
@@ -67,60 +77,119 @@
 
 					<section class="row">
 						<div class="col-sm-12">
-						<div class="alert bg-primary" role="alert"><em class="fa fa-comment mr-2"></em> ¡Tiene un nuevo pedido de @nombreCliente! <a href="#" class="float-right"><em class="fa fa-remove"></em></a></div>
 							<section class="row">
-								<div class="col-md-12 col-lg-8">
-									<div class="jumbotron">
-										<h1 class="mb-4">¡Bienvenido!</h1>
+								<div class="col-12">
+									<div class="container">
+										<h3>Mis Notas</h3>
+										<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="nota">Nueva nota &#10010;</button>
+										<div class="modal fade" id="myModal" role="dialog">
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+													<form>
+														<h4><input type="text" name="" placeholder="título de la nota"><h4>
+													</div>
+													<div class="modal-body">
+														<textarea placeholder="Nota" class="col-12"></textarea>
+													</div>
+													</form>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+													</div>
+												</div>
 
-										<p class="lead">Esto es un consejo de como usar la aplicación o sobre nuevas herramientas y curiosidades.
-											Este mensaje es cambiante :)</p>
-
-											<p>Esto es un consejo de como usar la aplicación o sobre nuevas herramientas y curiosidades.
-											Este mensaje es cambiante :)</p>
-
-												<p class="lead"><a class="btn btn-primary btn-lg mt-2" href="#" role="button"> ¿Te ha resultado útil?</a></p>
 											</div>
 										</div>
 
-										<div class="col-md-12 col-lg-4">
-											<div class="card mb-4">
-												<div class="card-block"></div>
-
-												<div id="calendar"></div>
-											</div>
-										</section>
 									</div>
-								</section>
-							</main>
+								</div>
+
+								<div class="col-lg-4 mb-4">
+									<div class="card">
+										<div class="card-header">Nota 1 <input type="button" id="eliminar" value="&#9998;"><input type="button" id="eliminar" value="X"></div>
+
+										<div class="card-block">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+												ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus
+												nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui
+											pharetra molestie. Fusce et dui urna.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 mb-4">
+									<div class="card card-inverse card-primary">
+										<div class="card-header">Nota 2 <input type="button" id="eliminar" value="&#9998;"><input type="button" id="eliminar" value="X"></div>
+
+										<div class="card-block">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+												ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus
+												nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui
+											pharetra molestie. Fusce et dui urna.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 mb-4">
+									<div class="card card-inverse card-success">
+										<div class="card-header">Nota 3	<input type="button" id="eliminar" value="&#9998;"><input type="button" id="eliminar" value="X"></div>
+
+										<div class="card-block">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+												ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus
+												nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui
+											pharetra molestie. Fusce et dui urna.</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 mb-4">
+									<div class="card card-inverse card-info">
+										<div class="card-header">Nota 4 <input type="button" id="eliminar" value="&#9998;"><input type="button" id="eliminar" value="X"></div>
+
+										<div class="card-block">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+												ut ante in sapien blandit luctus sed ut lacus. Phasellus urna est, faucibus
+												nec ultrices placerat, feugiat et ligula. Donec vestibulum magna a dui
+											pharetra molestie. Fusce et dui urna.</p>
+										</div>
+									</div>
+								</div>
+
+							</section>
+
 						</div>
-					</div>
+					</section>
+				</main>
+			</div>
+		</div>
+
 
     <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
-    
-    <script src="js/chart.min.js"></script>
-    <script src="js/chart-data.js"></script>
-    <script src="js/easypiechart.js"></script>
-    <script src="js/easypiechart-data.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/custom.js"></script>
-    <script>
-    	window.onload = function () {
-    		var chart1 = document.getElementById("line-chart").getContext("2d");
-    		window.myLine = new Chart(chart1).Line(lineChartData, {
-    			responsive: true,
-    			scaleLineColor: "rgba(0,0,0,.2)",
-    			scaleGridLineColor: "rgba(0,0,0,.05)",
-    			scaleFontColor: "#c5c7cc"
-    		});
-    	};
-    </script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    
-</body>
-</html>
+    	================================================== -->
+    	<!-- Placed at the end of the document so the pages load faster -->
+    	<script src="js/jquery-3.2.1.min.js"></script>
+    	<script src="dist/js/bootstrap.min.js"></script>
+
+    	<script src="js/chart.min.js"></script>
+    	<script src="js/chart-data.js"></script>
+    	<script src="js/easypiechart.js"></script>
+    	<script src="js/easypiechart-data.js"></script>
+    	<script src="js/bootstrap-datepicker.js"></script>
+    	<script src="js/custom.js"></script>
+    	<script>
+    		window.onload = function () {
+    			var chart1 = document.getElementById("line-chart").getContext("2d");
+    			window.myLine = new Chart(chart1).Line(lineChartData, {
+    				responsive: true,
+    				scaleLineColor: "rgba(0,0,0,.2)",
+    				scaleGridLineColor: "rgba(0,0,0,.05)",
+    				scaleFontColor: "#c5c7cc"
+    			});
+    		};
+    	</script>
+
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+
+    </body>
+    </html>
